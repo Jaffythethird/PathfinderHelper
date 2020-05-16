@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <readline/readline.h>
+#include "PFHelper.h"
 
-int PFHelper::main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	printf("Welcome to PFHelper");
-	char *buffer = {""};
+	char *buffer = {};
 	while (buffer != command_list[0])
 	{
 		free(buffer);

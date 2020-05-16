@@ -3,10 +3,7 @@
 #include <string.h>
 #include <readline/readline.h>
 
-char *command_list[] =
-{
-	"exit"
-};
+const char *command_list[] = {"exit","spell"};
 
 public:
 	int main(int argc, char *argv[]);
