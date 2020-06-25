@@ -1,10 +1,10 @@
 CXX = g++
-CXXFLAGS = -Wall -g
+CXXFLAGS = -Wall -g -lreadline
 
 CFILES = PFHelper.o 
 
 pathfinderHelper: $(CFILES)
-	$(CXX) $(CXXFLAGS) -o $(CFILES)
+	$(CXX) $(CXXFLAGS) -o pfHelper $(CFILES)
 
 PFHelper.o: PFHelper.h
 

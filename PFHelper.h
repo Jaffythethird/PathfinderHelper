@@ -5,5 +5,4 @@
 
 const char *command_list[] = {"exit","spell"};
 
-public:
-	int main(int argc, char *argv[]);
+int main(int argc, char *argv[]);
