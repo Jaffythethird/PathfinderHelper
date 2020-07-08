@@ -53,8 +53,11 @@ class BufferAwareCompleter(object):
 
                     logging.debug('candidates=%s', self.current_candidates)
                     
-                except (KeyError, IndexError), err:
-                    logging.error('completion error: %s', err)
+                except KeyError:
+                    logging.error('completion error: %s', KeyError)
+                    self.current_candidates = []
+                except IndexError:
+                    logging.error('completion error: %s', IndexError)
                     self.current_candidates = []
         
         try:
@@ -68,8 +71,8 @@ class BufferAwareCompleter(object):
 def input_loop():
     line = ''
     while line != 'stop':
-        line = raw_input('Prompt ("stop" to quit): ')
-        print 'Dispatch %s' % line
+        line = input('Prompt ("stop" to quit): ')
+        print('Dispatch %s' % line)
 
 # Register our completer function
 readline.set_completer(BufferAwareCompleter(
